@@ -1,0 +1,338 @@
+/* LIGHT THEME */
+
+#hero-about.light {
+  --bg-color: #ececec;
+  --card-bg: #ececec;
+  --text-color: #4b4949;
+  --line-color: #2d2b29;
+  --circle-color: rgba(98, 74, 74, 0.18);
+}
+
+/* DARK THEME */
+
+#hero-about.dark {
+  --bg-color: #1d1b1b;
+  --card-bg: #1d1b1b;
+  --text-color: #f3eee8;
+  --line-color: #d7c4b3;
+  --circle-color: rgba(255, 255, 255, 0.04);
+}
+
+/* MAIN SECTION */
+
+#hero-about {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* CONTAINER */
+
+.hero-about-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 360px 1fr;
+
+  background: var(--card-bg);
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* LEFT IMAGE */
+
+.hero-about-image {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT CONTENT */
+
+.hero-about-content {
+  position: relative;
+
+  padding: 3rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* TOP LINE */
+
+.top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 4rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+.line {
+  width: 85%;
+  height: 1px;
+
+  background: var(--line-color);
+
+  transition: all 0.4s ease;
+}
+
+/* DOTS */
+
+.dots {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.dots span {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: var(--line-color);
+
+  transition: all 0.4s ease;
+}
+
+/* HERO TEXT */
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  line-height: 2;
+
+  color: var(--text-color);
+
+  margin-bottom: 3rem;
+
+  transition: all 0.4s ease;
+}
+
+/* GRID */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* COLUMN */
+
+.expertise-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ITEMS */
+
+.expertise-column span {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+
+  color: var(--line-color);
+
+  font-weight: 600;
+
+  transition: all 0.35s ease;
+
+  width: fit-content;
+
+  cursor: pointer;
+}
+
+.expertise-column span:hover {
+  transform: translateX(12px);
+  color: #ffffff;
+}
+
+/* BOTTOM LINE */
+
+.bottom-line {
+  width: 85%;
+  height: 1px;
+
+  background: var(--line-color);
+
+  margin-top: 3rem;
+
+  position: relative;
+  z-index: 2;
+
+  transition: all 0.4s ease;
+}
+
+/* BACKGROUND CIRCLE */
+
+.bg-circle {
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  border-radius: 50%;
+
+  background: var(--circle-color);
+
+  right: -420px;
+  bottom: -420px;
+
+  z-index: 1;
+
+  transition: all 0.4s ease;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+
+  .hero-about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-about-image {
+    height: 500px;
+  }
+
+  .hero-about-content {
+    padding: 2.5rem 2rem;
+  }
+
+  .top-line {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #hero-about {
+    padding: 0;
+  }
+
+  .hero-about-container {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+  }
+
+  /* IMAGE */
+
+  .hero-about-image {
+    height: 300px;
+
+    overflow: hidden;
+  }
+
+  .hero-about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* SHOW TOP PART */
+
+    object-position: top;
+  }
+
+  /* CONTENT */
+
+  .hero-about-content {
+    padding: 1.6rem 1rem;
+  }
+
+  .top-line {
+    margin-bottom: 1.4rem;
+  }
+
+  /* TEXT */
+
+  .hero-text p {
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 1.3rem;
+  }
+
+  /* GRID */
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0.5rem;
+  }
+
+  .expertise-column {
+    gap: 0.45rem;
+  }
+
+  /* ITEMS */
+
+  .expertise-column span {
+    font-size: 0.72rem;
+
+    letter-spacing: 0.02em;
+
+    line-height: 1.35;
+  }
+
+  .dots span {
+    width: 9px;
+    height: 9px;
+  }
+
+  .bottom-line {
+    margin-top: 1.5rem;
+  }
+
+  /* BACKGROUND CIRCLE */
+
+  .bg-circle {
+    width: 420px;
+    height: 420px;
+
+    right: -220px;
+    bottom: -220px;
+  }
+}

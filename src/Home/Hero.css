@@ -1,0 +1,549 @@
+/* LIGHT THEME */
+
+#hero.light {
+  --bg-color: #ececec;
+  --card-bg: #ececec;
+  --text-color: #080808;
+  --line-color: #6a6969;
+  --circle-color: rgba(98, 74, 74, 0.18);
+
+  --contact-bg: rgba(255,255,255,0.55);
+  --contact-border: rgba(73,46,14,0.08);
+}
+
+/* DARK THEME */
+
+#hero.dark {
+  --bg-color: #1d1b1b;
+  --card-bg: #1d1b1b;
+  --text-color: #f3eee8;
+  --line-color: #d7c4b3;
+  --circle-color: rgba(255,255,255,0.04);
+
+  --contact-bg: rgba(255,255,255,0.03);
+  --contact-border: rgba(255,255,255,0.06);
+}
+
+/* MAIN */
+
+#hero {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+
+  transition: 0.4s ease;
+}
+
+/* WRAPPER */
+
+.hero-wrapper {
+  width: 100%;
+  max-width: 1450px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 2rem;
+}
+
+/* LEFT */
+
+.hero-left {
+  z-index: 5;
+}
+
+/* NAME */
+
+.hero-name {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: var(--text-color);
+
+  margin-bottom: 1rem;
+}
+
+/* ROLE */
+
+.hero-role {
+  font-size: 1rem;
+
+  letter-spacing: 0.35em;
+
+  color: var(--line-color);
+
+  margin-bottom: 2rem;
+}
+
+/* LINE */
+
+.hero-line {
+  width: 70%;
+  height: 1px;
+
+  background: var(--line-color);
+
+  margin-bottom: 2rem;
+}
+
+/* META */
+
+.hero-meta {
+  background: var(--contact-bg);
+
+  border: 1px solid var(--contact-border);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+
+  padding: 1.2rem;
+
+  max-width: 720px;
+}
+
+/* CONTACT */
+
+.hero-contact-links {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+/* CONTACT ITEM */
+
+.hero-contact-col {
+  text-decoration: none;
+
+  color: inherit;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+/* HEAD */
+
+.hero-contact-head {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+/* ICON */
+
+.hero-contact-ico {
+  font-size: 0.95rem;
+
+  color: var(--line-color);
+}
+
+/* LABEL */
+
+.hero-contact-label {
+  font-size: 0.72rem;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  color: var(--line-color);
+
+  font-weight: 700;
+}
+
+/* VALUE */
+
+.hero-contact-value {
+  font-size: 0.9rem;
+
+  color: var(--text-color);
+
+  font-weight: 600;
+}
+
+/* SOCIAL + CV */
+
+.hero-social-wrapper {
+  margin-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+/* SOCIAL */
+
+.hero-social {
+  list-style: none;
+
+  display: flex;
+
+  gap: 0.8rem;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* SPACE BETWEEN INSTAGRAM & CV */
+
+.cv-space {
+  width: 95px;
+}
+/* SOCIAL LINK */
+
+.hero-social-link {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 1rem;
+
+  transition: 0.3s ease;
+}
+
+.hero-social-link:hover {
+  transform: translateY(-5px);
+}
+
+/* ICON COLORS */
+
+.hero-social li:nth-child(1) .hero-social-link {
+  background: #1b1f23;
+}
+
+.hero-social li:nth-child(2) .hero-social-link {
+  background: #0a66c2;
+}
+
+.hero-social li:nth-child(3) .hero-social-link {
+  background: #ff6f00;
+}
+
+.hero-social li:nth-child(4) .hero-social-link {
+  background: #000000;
+}
+
+.hero-social li:nth-child(5) .hero-social-link {
+  background: linear-gradient(
+    145deg,
+    #f58529,
+    #dd2a7b,
+    #8134af
+  );
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.2rem;
+
+  border-radius: 14px;
+
+  background: var(--line-color);
+
+  color: var(--bg-color);
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  transition: 0.35s ease;
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-4px);
+
+  opacity: 0.92;
+}
+
+/* RIGHT */
+
+.hero-right {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CIRCLE */
+
+.circle-bg {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  border-radius: 50%;
+
+  border: 2px solid var(--line-color);
+
+  right: -120px;
+  top: -50px;
+}
+
+/* IMAGE */
+
+.image-shape {
+  width: 420px;
+  height: 520px;
+
+  overflow: hidden;
+
+  border-radius: 220px 220px 20px 20px;
+
+  background: var(--circle-color);
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.image-shape img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .hero-line {
+    margin-inline: auto;
+  }
+
+  .hero-meta {
+    margin-inline: auto;
+  }
+
+  .hero-contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-contact-col {
+    align-items: center;
+  }
+
+  .hero-contact-head {
+    justify-content: center;
+  }
+
+  .hero-social-wrapper {
+    justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 2rem;
+  }
+
+  .circle-bg {
+    width: 420px;
+    height: 420px;
+
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 768px) {
+
+  #hero {
+    padding: 1.2rem;
+  }
+
+  /* NAME */
+
+  .hero-name {
+    font-size: 1.5rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 0.3rem;
+
+    word-break: break-word;
+
+    overflow-wrap: break-word;
+  }
+
+  /* ROLE */
+
+  .hero-role {
+    font-size: 0.9rem;
+  }
+
+  /* LEFT */
+
+  .hero-left {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  /* IMAGE */
+
+  .image-shape {
+    width: 280px;
+    height: 360px;
+  }
+
+  .circle-bg {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* META CARD */
+
+  .hero-meta {
+    padding: 0.75rem;
+
+    border-radius: 14px;
+  }
+
+  /* CONTACT ROW */
+
+  .hero-contact-links {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0.35rem;
+  }
+
+  /* CONTACT BOX */
+
+  .hero-contact-col {
+    background: rgba(255,255,255,0.04);
+
+    padding: 0.45rem 0.25rem;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.18rem;
+
+    min-width: 0;
+  }
+
+  /* CONTACT HEAD */
+
+  .hero-contact-head {
+    justify-content: center;
+
+    gap: 0.22rem;
+  }
+
+  /* ICON */
+
+  .hero-contact-ico {
+    font-size: 0.6rem;
+  }
+
+  /* LABEL */
+
+  .hero-contact-label {
+    font-size: 0.45rem;
+
+    letter-spacing: 0.03em;
+  }
+
+  /* VALUE */
+
+  .hero-contact-value {
+    font-size: 0.52rem;
+
+    line-height: 1.1;
+
+    word-break: break-word;
+  }
+
+  /* SOCIAL + CV */
+
+  .hero-social-wrapper {
+    margin-top: 0.8rem;
+
+    justify-content: center;
+
+    gap: 0.45rem;
+  }
+
+  /* REMOVE EMPTY SPACE */
+
+  .cv-space {
+    display: none;
+  }
+
+  /* SOCIAL ICON */
+
+  .hero-social-link {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    font-size: 0.78rem;
+  }
+
+  /* DOWNLOAD BUTTON */
+
+  .download-cv-btn {
+    padding: 0.58rem 0.72rem;
+
+    font-size: 0.62rem;
+
+    border-radius: 9px;
+
+    gap: 0.32rem;
+  }
+}

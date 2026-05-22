@@ -1,0 +1,85 @@
+/* LIGHT THEME */
+
+#education-creative.light {
+  --bg-color: #ececec;
+  --accent-color: #4b4949;
+  --text-color: #ffffff;
+}
+
+/* DARK THEME */
+
+#education-creative.dark {
+  --bg-color: #1d1b1b;
+  --accent-color: #b7b7b7;
+  --text-color: #111111;
+}
+
+/* MAIN SECTION */
+
+#education-creative {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+
+  display: flex;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* VERTICAL TITLE */
+
+.vertical-title {
+  width: 180px;
+  min-height: 100vh;
+
+  background: var(--accent-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* TEXT */
+
+.vertical-title h1 {
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  color: var(--text-color);
+
+  letter-spacing: 0.05em;
+
+  font-weight: 900;
+
+  user-select: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .vertical-title {
+    width: 100%;
+    min-height: 180px;
+  }
+
+  .vertical-title h1 {
+    writing-mode: horizontal-tb;
+
+    transform: none;
+
+    font-size: 3rem;
+  }
+
+  #education-creative {
+    min-height: auto;
+  }
+}

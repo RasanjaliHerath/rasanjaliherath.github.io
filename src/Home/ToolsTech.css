@@ -1,0 +1,335 @@
+/* =========================
+   LIGHT THEME
+========================= */
+
+#technical-expertise.light {
+  --bg-color: #f4f4f4;
+  --heading-color: #000000;
+  --title-color: #111111;
+  --subtitle-color: #8b8b8b;
+  --text-color: #444444;
+  --card-bg: #ffffff;
+
+  --border-color: rgba(0,0,0,0.06);
+  --tag-bg: #f1f1f1;
+
+  --shadow-color: rgba(0,0,0,0.06);
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+#technical-expertise.dark {
+  --bg-color: #171717;
+  --heading-color: #ffffff;
+  --title-color: #f3f3f3;
+  --subtitle-color: #bdbdbd;
+  --text-color: #bdbdbd;
+  --card-bg: #232323;
+
+  --border-color: rgba(255,255,255,0.06);
+  --tag-bg: #2d2d2d;
+
+  --shadow-color: rgba(0,0,0,0.28);
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+#technical-expertise {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+
+  padding: 1.5rem 2rem 6rem;
+
+  overflow: visible;
+
+  transition: all 0.4s ease;
+
+  position: relative;
+}
+
+/* =========================
+   BACKGROUND ART
+========================= */
+
+#technical-expertise::before {
+  content: '';
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.03);
+
+  top: -180px;
+  right: -180px;
+
+  z-index: 1;
+}
+
+#technical-expertise::after {
+  content: '';
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(255,255,255,0.06);
+
+  bottom: -120px;
+  left: -120px;
+
+  z-index: 1;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.expertise-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.expertise-title {
+  text-align: center;
+
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 900;
+
+  letter-spacing: -0.04em;
+
+  color: var(--title-color);
+
+  margin-bottom: 1.3rem;
+
+  margin-top: -1rem;
+
+  line-height: 0.95;
+
+  transition: all 0.4s ease;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.expertise-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+
+  align-items: start;
+
+  margin-top: -0.5rem;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.expertise-card {
+  background: var(--card-bg);
+
+  padding: 1.6rem;
+
+  border-radius: 26px;
+
+  border: 1px solid var(--border-color);
+
+  transition: all 0.4s ease;
+
+  box-shadow: 0 10px 30px var(--shadow-color);
+
+  position: relative;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(12px);
+
+  transform: translateY(-8px);
+}
+
+.expertise-card:hover {
+  transform: translateY(-16px);
+}
+
+/* TOP LINE */
+
+.expertise-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: var(--title-color);
+}
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.expertise-card h2 {
+  font-size: 1.8rem;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--heading-color);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+
+  transition: all 0.4s ease;
+}
+
+/* =========================
+   TAG CONTAINER
+========================= */
+
+.tag-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+}
+
+/* =========================
+   TAG
+========================= */
+
+.skill-tag {
+  padding: 0.75rem 1.1rem;
+
+  background: var(--tag-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 999px;
+
+  color: var(--text-color);
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+
+  transition: all 0.35s ease;
+
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.skill-tag:hover {
+  background: var(--title-color);
+
+  color: var(--bg-color);
+
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.2rem;
+  }
+
+  .expertise-card {
+    max-width: 750px;
+
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #technical-expertise {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .expertise-title {
+    font-size: 3rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .expertise-grid {
+    gap: 1rem;
+  }
+
+  .expertise-card {
+    padding: 1.3rem;
+
+    border-radius: 22px;
+  }
+
+  .expertise-card h2 {
+    font-size: 1.45rem;
+
+    margin-bottom: 1.2rem;
+  }
+
+  .skill-tag {
+    font-size: 0.82rem;
+
+    padding: 0.65rem 0.95rem;
+  }
+
+  #technical-expertise::before {
+    width: 300px;
+    height: 300px;
+
+    top: -120px;
+    right: -120px;
+  }
+
+  #technical-expertise::after {
+    width: 180px;
+    height: 180px;
+
+    bottom: -70px;
+    left: -70px;
+  }
+}

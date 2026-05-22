@@ -1,0 +1,325 @@
+/* LIGHT THEME */
+
+#contact-info.light {
+  --bg-color: #ececec;
+  --card-color: #ffffff;
+  --text-color: #4b4949;
+
+  /* BLACK/BROWN ICON BACKGROUND */
+  --accent-color: #100a03;
+
+  --circle-color: rgba(98, 74, 74, 0.12);
+  --border-color: rgba(73, 46, 14, 0.1);
+}
+
+/* DARK THEME */
+
+#contact-info.dark {
+  --bg-color: #1d1b1b;
+  --card-color: #111111;
+  --text-color: #f3eee8;
+
+  /* WHITE */
+  --accent-color: #ffffff;
+
+  --circle-color: rgba(255,255,255,0.03);
+  --border-color: rgba(255,255,255,0.06);
+}
+
+/* MAIN */
+
+#contact-info {
+  width: 100%;
+
+  background: var(--bg-color);
+
+  padding: 2rem 1.2rem;
+
+  transition: 0.4s ease;
+}
+
+/* CONTAINER */
+
+.contact-container {
+  width: 100%;
+
+  max-width: 1300px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 32% 68%;
+
+  gap: 2rem;
+
+  align-items: center;
+}
+
+/* LEFT */
+
+.contact-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+
+.image-border {
+  width: 240px;
+  height: 300px;
+
+  border-radius: 140px 140px 18px 18px;
+
+  overflow: hidden;
+
+  border: 2px solid var(--accent-color);
+}
+
+.image-border img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* RIGHT */
+
+.contact-right {
+  width: 100%;
+}
+
+/* TITLE */
+
+.contact-right h1 {
+  font-size: 2rem;
+
+  color: var(--accent-color);
+
+  margin-bottom: 1.5rem;
+
+  letter-spacing: 0.08em;
+}
+
+/* CONTACT ROW */
+
+.contact-details {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+/* ITEM */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  background: var(--card-color);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 14px;
+
+  padding: 0.7rem 1rem;
+
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+}
+
+/* ICON */
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--accent-color);
+
+  /* ICON COLOR */
+  color: var(--bg-color);
+
+  font-size: 0.95rem;
+}
+
+.whatsapp {
+  background: #25D366;
+
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* TEXT */
+
+.contact-item h3 {
+  font-size: 0.8rem;
+
+  margin-bottom: 0.15rem;
+
+  color: var(--accent-color);
+}
+
+.contact-item p {
+  font-size: 0.8rem;
+
+  color: var(--text-color);
+
+  line-height: 1.4;
+}
+
+/* SOCIAL SECTION */
+
+.social-section h2 {
+  color: var(--accent-color);
+
+  font-size: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+/* ICONS */
+
+/* =========================
+   SOCIAL ICONS ONLY
+========================= */
+
+.social-icons {
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+/* LIGHT MODE */
+
+#contact-info.light .social-icons a {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #0a0a0a;
+
+  color: #ffffff;
+
+  border: none;
+
+  font-size: 1.1rem;
+
+  transition: 0.3s ease;
+}
+
+/* DARK MODE */
+
+#contact-info.dark .social-icons a {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* PURE WHITE BACKGROUND */
+  background: #ffffff;
+
+  /* BLACK ICON */
+  color: #111111;
+
+  border: none;
+
+  font-size: 1.1rem;
+
+  transition: 0.3s ease;
+}
+
+/* FORCE ICON COLOR */
+
+.social-icons a svg {
+  color: inherit !important;
+  fill: currentColor !important;
+}
+
+/* HOVER */
+
+.social-icons a:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .contact-details {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #contact-info {
+    padding: 2rem 0.8rem;
+  }
+
+  .image-border {
+    width: 190px;
+    height: 240px;
+  }
+
+  .contact-right h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-details {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    width: 100%;
+  }
+}

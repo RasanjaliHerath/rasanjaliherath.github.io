@@ -1,0 +1,162 @@
+/* LIGHT THEME */
+
+#about-title.light {
+  --bg-color: #ececec;
+  --title-color: #000000;
+  --circle-color: #4b4949;
+  --line-color: #4b4949;
+}
+
+/* DARK THEME */
+
+#about-title.dark {
+  --bg-color: #1d1b1b;
+  --title-color: #ffffff;
+  --circle-color: #b7b7b7;
+  --line-color: #b7b7b7;
+}
+
+/* MAIN SECTION */
+
+#about-title {
+  width: 100%;
+  min-height: 30vh;
+  background: var(--bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* TITLE WRAPPER */
+
+.about-title-wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+/* TITLE */
+
+.about-title-wrapper h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: var(--title-color);
+
+  letter-spacing: 0.03em;
+
+  transition: all 0.4s ease;
+}
+
+/* CORNER CIRCLES */
+
+.corner-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* TOP LEFT */
+
+.top-left {
+  width: 180px;
+  height: 180px;
+
+  top: -70px;
+  left: -70px;
+
+  border: 5px solid var(--line-color);
+}
+
+.top-left::before,
+.top-left::after {
+  content: '';
+
+  position: absolute;
+  border-radius: 50%;
+
+  border: 4px solid var(--line-color);
+}
+
+.top-left::before {
+  inset: 12px;
+}
+
+.top-left::after {
+  inset: 24px;
+}
+
+/* BOTTOM RIGHT */
+
+.bottom-right {
+  width: 320px;
+  height: 320px;
+
+  right: -140px;
+  bottom: -140px;
+
+  border: 6px solid var(--line-color);
+}
+
+.bottom-right::before,
+.bottom-right::after {
+  content: '';
+
+  position: absolute;
+  border-radius: 50%;
+
+  border: 5px solid var(--line-color);
+}
+
+.bottom-right::before {
+  inset: 18px;
+}
+
+.bottom-right::after {
+  inset: 36px;
+}
+
+/* INNER FILLED PART */
+
+.top-left,
+.bottom-right {
+  background:
+    radial-gradient(
+      circle,
+      var(--circle-color) 0%,
+      var(--circle-color) 45%,
+      transparent 46%
+    );
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  #about-title {
+    min-height: 22vh;
+    padding: 2rem 1rem;
+  }
+
+  .about-title-wrapper h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .top-left {
+    width: 120px;
+    height: 120px;
+    top: -45px;
+    left: -45px;
+  }
+
+  .bottom-right {
+    width: 220px;
+    height: 220px;
+    right: -100px;
+    bottom: -100px;
+  }
+}

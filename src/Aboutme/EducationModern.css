@@ -1,0 +1,403 @@
+/* =========================
+   LIGHT THEME
+========================= */
+
+#education-modern.light {
+  --bg-color: #ececec;
+  --bgt-color: #060606;
+  --card-bg: #ffffff;
+  --accent-color: #ececec;
+  --text-color: #111111;
+  --secondary-text: #110f0f;
+  --overlay-text: rgba(52, 50, 50, 0.08);
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+#education-modern.dark {
+  --bg-color: #1d1b1b;
+  --bgt-color: #f9f5f5;
+  --card-bg: #111111;
+  --accent-color: #1d1b1b;
+  --accents-color: #1d1b1b;
+  --text-color: #ffffff;
+  --secondary-text: #c3baba;
+  --overlay-text: rgba(63, 57, 57, 0.758);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+#education-modern {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+  overflow-x: hidden;
+  transition: all 0.4s ease;
+  padding-bottom: 2rem;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+  width: 100%;
+  min-height: 75px;
+  background: var(--accents-color);
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 0.5rem 1rem;
+}
+
+/* BACKGROUND WORD */
+
+.top-bar-title-bg {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(2rem, 7vw, 3rem);
+
+  font-weight: 900;
+
+  color: var(--overlay-text);
+
+  letter-spacing: 0.08em;
+
+  white-space: nowrap;
+
+  user-select: none;
+
+  margin: 0;
+
+  z-index: 1;
+}
+
+/* FRONT WORD */
+
+.top-bar-title-edu {
+  position: relative;
+
+  z-index: 5;
+
+  font-size: clamp(2rem, 4vw, 2.5rem);
+
+  color: var(--bgt-color);
+
+  letter-spacing: 0.18em;
+
+  font-weight: 800;
+
+  margin: 0;
+}
+
+/* =========================
+   SLIDER WRAPPER
+========================= */
+
+.education-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.education-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 1rem;
+
+  padding: 1rem;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.education-card {
+  width: 100%;
+
+  background: var(--card-bg);
+
+  color: var(--text-color);
+
+  padding: 1rem;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.education-card h2 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-bottom: 0.7rem;
+  color: var(--text-color);
+}
+
+.education-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* LIGHT MODE YEAR */
+
+#education-modern.light .education-card span {
+  color: #000000;
+}
+
+/* DARK MODE YEAR */
+
+#education-modern.dark .education-card span {
+  color: #ffffff;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.education-card p {
+  font-size: 0.82rem;
+
+  line-height: 1.7;
+
+  color: var(--secondary-text);
+
+  margin-bottom: 0.8rem;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.education-image-top {
+  width: 100%;
+
+  height: 200px;
+
+  overflow: hidden;
+
+  margin-bottom: 1rem;
+}
+
+.education-image-top img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: none;
+}
+
+
+.education-image-top:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+/* HIDE ARROWS BY DEFAULT */
+
+.slider-arrow {
+  display: none;
+}
+
+/* =========================
+   MOBILE ONLY
+========================= */
+
+/* =========================
+   MOBILE
+========================= */
+
+.slider-arrow {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  #education-modern {
+    overflow-x: hidden;
+  }
+
+  .education-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .education-grid {
+    display: flex;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+  }
+
+  .education-grid::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .education-card {
+    min-width: 88%;
+    flex: 0 0 88%;
+
+    scroll-snap-align: center;
+  }
+
+  /* SHOW ARROWS ONLY MOBILE */
+
+  .slider-arrow {
+    display: flex;
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: rgba(0,0,0,0.7);
+
+    color: white;
+
+    z-index: 20;
+
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+  }
+
+  .slider-arrow.left {
+    left: 8px;
+  }
+
+  .slider-arrow.right {
+    right: 8px;
+  }
+.education-grid {
+  margin-top: 2rem;
+}
+  #education-modern.dark .slider-arrow {
+    background: rgba(255,255,255,0.9);
+    color: black;
+  }
+
+  .top-bar-title-edu {
+  position: relative;
+
+  z-index: 5;
+
+  font-size: 2rem;
+
+  color: var(--bgt-color);
+
+  letter-spacing: 0.18em;
+
+  font-weight: 800;
+
+  margin: 0;
+}
+.top-bar-title-bg {
+  font-size: 3rem !important;
+
+  letter-spacing: 0.12em;
+}
+
+
+}

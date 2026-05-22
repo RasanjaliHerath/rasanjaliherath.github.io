@@ -1,0 +1,184 @@
+/* LoadingPage.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+
+  background: #050505;
+
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 99999;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Canvas */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Glow Background */
+.bg-light {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08),
+    transparent 70%
+  );
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  filter: blur(50px);
+
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Loading Percentage */
+.loading-text {
+  position: absolute;
+
+  bottom: 8%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: white;
+
+  z-index: 100;
+}
+
+.loading-text h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+/* Fade Out */
+.hide-loader {
+  animation: disappear 1.5s forwards;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(30px);
+    transform: scale(1.2);
+
+    visibility: hidden;
+  }
+}
+
+/* Spark Particles */
+.spark {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px white;
+
+  opacity: 0;
+
+  z-index: 20;
+
+  animation: sparkFly 3s infinite;
+}
+
+.spark1 {
+  top: 50%;
+  left: 50%;
+}
+
+.spark2 {
+  top: 52%;
+  left: 48%;
+  animation-delay: 0.6s;
+}
+
+.spark3 {
+  top: 48%;
+  left: 51%;
+  animation-delay: 1.2s;
+}
+
+.spark4 {
+  top: 49%;
+  left: 53%;
+  animation-delay: 1.8s;
+}
+
+.spark5 {
+  top: 47%;
+  left: 50%;
+  animation-delay: 2.4s;
+}
+
+@keyframes sparkFly {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(80px, -80px) scale(1.8);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(150px, -150px) scale(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .loading-text h1 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,481 @@
+/* =========================
+   LIGHT THEME
+========================= */
+
+#short-about.light {
+  --bg-color: #ececec;
+  --card-bg: #ececec;
+  --text-color: #090909;
+  --line-color: #6a6969;
+  --circle-color: rgba(98, 74, 74, 0.18);
+
+  --contact-bg: rgba(255,255,255,0.55);
+  --contact-border: rgba(73,46,14,0.08);
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+#short-about.dark {
+  --bg-color: #1d1b1b;
+  --card-bg: #1d1b1b;
+  --text-color: #f3eee8;
+  --line-color: #d7c4b3;
+  --circle-color: rgba(255,255,255,0.04);
+
+  --contact-bg: rgba(255,255,255,0.03);
+  --contact-border: rgba(255,255,255,0.06);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+#short-about {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 4rem 2rem;
+
+  transition: 0.4s ease;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.about-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 4rem;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.about-left {
+  position: relative;
+}
+
+/* TAG */
+
+.about-tag {
+  display: inline-flex;
+
+  padding: 0.7rem 1.2rem;
+
+  border-radius: 50px;
+
+  background: var(--circle-color);
+
+  color: var(--line-color);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  margin-bottom: 1.5rem;
+}
+
+/* TITLE */
+
+.about-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  color: var(--text-color);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  margin-bottom: 2rem;
+}
+
+/* TEXT */
+
+.about-text {
+  max-width: 650px;
+
+  font-size: 1.05rem;
+
+  line-height: 2;
+
+  color: var(--text-color);
+
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   TYPEWRITER
+========================= */
+
+.typing-skill-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-top: 2rem;
+
+  flex-wrap: wrap;
+}
+
+.typing-prefix {
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  color: var(--line-color);
+
+  letter-spacing: 0.05em;
+}
+
+/* BOX */
+
+.typing-text {
+  position: relative;
+
+  height: 48px;
+
+  width: 420px;
+
+  max-width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 50px;
+
+  background: var(--circle-color);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  overflow: hidden;
+}
+
+/* TEXT */
+
+.auto-type {
+  position: relative;
+
+  color: var(--text-color);
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  white-space: nowrap;
+}
+
+/* WORDS */
+
+.auto-type::before {
+  content: "FULL STACK DEVELOPMENT";
+
+  animation: typingWords 20s infinite;
+}
+
+/* CURSOR */
+
+.auto-type::after {
+  content: "";
+
+  position: absolute;
+
+  right: -10px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 2px;
+
+  height: 18px;
+
+  background: var(--line-color);
+
+  animation: blinkCursor 0.7s infinite;
+}
+
+/* CURSOR BLINK */
+
+@keyframes blinkCursor {
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* TYPEWRITER WORDS */
+
+@keyframes typingWords {
+
+  0% { content: "F"; }
+  2% { content: "FU"; }
+  4% { content: "FULL"; }
+  6% { content: "FULL STACK"; }
+  8% { content: "FULL STACK DEVELOPMENT"; }
+
+  12% { content: ""; }
+
+  16% { content: "UI"; }
+  18% { content: "UI / UX"; }
+  20% { content: "UI / UX DESIGN"; }
+
+  24% { content: ""; }
+
+  28% { content: "WEB"; }
+  30% { content: "WEB APPLICATIONS"; }
+
+  34% { content: ""; }
+
+  38% { content: "MOBILE"; }
+  40% { content: "MOBILE APPS"; }
+
+  44% { content: ""; }
+
+  48% { content: "RESPONSIVE"; }
+  50% { content: "RESPONSIVE DESIGN"; }
+
+  54% { content: ""; }
+
+  58% { content: "CREATIVE"; }
+  60% { content: "CREATIVE SOLUTIONS"; }
+
+  100% { content: ""; }
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.about-right {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+
+.main-image-wrapper {
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 22px solid var(--line-color);
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.main-image-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: top;
+}
+
+/* SHADOW */
+
+.shadow {
+  position: absolute;
+
+  bottom: -30px;
+
+  width: 300px;
+  height: 40px;
+
+  background: rgba(0,0,0,0.18);
+
+  filter: blur(20px);
+
+  border-radius: 50%;
+}
+
+/* SHAPES */
+
+.shape {
+  position: absolute;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+.top-left {
+  width: 120px;
+  height: 120px;
+
+  background: var(--circle-color);
+
+  top: -40px;
+  left: -40px;
+}
+
+.bottom-right {
+  width: 140px;
+  height: 140px;
+
+  background: var(--circle-color);
+
+  right: -50px;
+  bottom: -50px;
+}
+
+.middle-circle {
+  width: 70px;
+  height: 70px;
+
+  background: var(--line-color);
+
+  opacity: 0.15;
+
+  left: 52%;
+  bottom: 120px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .about-left {
+    margin: auto;
+  }
+
+  .about-text {
+    margin-inline: auto;
+  }
+
+  .typing-skill-box {
+    justify-content: center;
+  }
+
+  .about-right {
+    margin-top: 2rem;
+  }
+
+  .middle-circle {
+    display: none;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  #short-about {
+    padding: 3rem 1rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+
+    line-height: 1.9;
+  }
+
+  /* IMAGE FIX */
+
+ .main-image-wrapper {
+  width: 220px;
+
+  height: 220px;
+
+  border-width: 8px;
+
+  margin: auto;
+
+  margin-top: -2rem;
+}
+
+  .main-image-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: top;
+  }
+
+  /* TYPEWRITER */
+
+.typing-skill-box {
+  justify-content: center;
+
+  text-align: center;
+
+  margin-top: 1rem;
+}
+
+.about-right {
+  margin-top: -1rem;
+}
+
+  .typing-prefix {
+    width: 100%;
+  }
+
+  .typing-text {
+    min-width: 100%;
+
+    max-width: 100%;
+
+    justify-content: center;
+
+    height: 46px;
+  }
+
+  .auto-type {
+    font-size: 0.72rem;
+  }
+
+  .shadow {
+    width: 180px;
+  }
+}

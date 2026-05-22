@@ -1,0 +1,291 @@
+/* LIGHT THEME */
+
+#bict-section.light {
+  --bg-color: #f5efea;
+  --card-bg: #f8f4f0;
+  --primary-color: #8a5a3b;
+  --secondary-color: #c79b7a;
+  --text-color: #6d4b38;
+  --border-color: #c89f7d;
+  --pattern-color: rgba(200, 159, 125, 0.15);
+}
+
+/* DARK THEME */
+
+#bict-section.dark {
+  --bg-color: #1d1714;
+  --card-bg: #2b231f;
+  --primary-color: #f1d7c2;
+  --secondary-color: #c79b7a;
+  --text-color: #e6d5c8;
+  --border-color: #8a5a3b;
+  --pattern-color: rgba(255, 255, 255, 0.03);
+}
+
+/* MAIN SECTION */
+
+#bict-section {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 2rem;
+
+  transition: all 0.4s ease;
+}
+
+/* BACKGROUND PATTERN */
+
+.pattern-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      var(--pattern-color) 20%,
+      transparent 20%
+    ),
+    linear-gradient(
+      var(--pattern-color) 20%,
+      transparent 20%
+    );
+
+  background-size: 220px 220px;
+
+  opacity: 0.7;
+}
+
+/* CARD */
+
+.bict-card {
+  width: 100%;
+  max-width: 1100px;
+
+  background: var(--card-bg);
+
+  border: 5px solid var(--border-color);
+
+  border-radius: 120px 120px 40px 40px;
+
+  padding: 3rem;
+
+  position: relative;
+  z-index: 5;
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* TOP DECORATION */
+
+.top-decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.curve {
+  width: 180px;
+  height: 40px;
+
+  border-top: 6px solid var(--primary-color);
+
+  border-radius: 100px;
+
+  position: relative;
+}
+
+.curve::before,
+.curve::after {
+  content: '';
+
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+
+  border: 6px solid var(--primary-color);
+
+  border-radius: 50%;
+}
+
+.curve::before {
+  left: 30px;
+  top: -22px;
+}
+
+.curve::after {
+  right: 30px;
+  top: -22px;
+}
+
+.circle {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  margin-top: -10px;
+}
+
+/* TITLE */
+
+.bict-card h1 {
+  text-align: center;
+
+  font-size: clamp(4rem, 8vw, 6rem);
+
+  color: var(--primary-color);
+
+  font-family: "Georgia", serif;
+
+  margin-bottom: 0.5rem;
+}
+
+/* YEAR */
+
+.year {
+  display: block;
+
+  text-align: center;
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  color: var(--secondary-color);
+
+  margin-bottom: 3rem;
+}
+
+/* CONTENT */
+
+.bict-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+
+  gap: 3rem;
+
+  align-items: center;
+}
+
+/* IMAGE */
+
+.bict-image {
+  width: 100%;
+  height: 420px;
+
+  border-radius: 180px 180px 0 0;
+
+  overflow: hidden;
+
+  border: 10px solid var(--border-color);
+}
+
+.bict-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* TEXT */
+
+.bict-text p {
+  font-size: 1.2rem;
+  line-height: 2;
+
+  color: var(--text-color);
+}
+
+/* LEAFS */
+
+.leaf {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  opacity: 0.2;
+
+  background:
+    radial-gradient(
+      circle,
+      var(--primary-color) 10%,
+      transparent 11%
+    );
+
+  z-index: 1;
+}
+
+.leaf.left {
+  left: -40px;
+  bottom: -40px;
+}
+
+.leaf.right {
+  right: -40px;
+  bottom: -40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .bict-content {
+    grid-template-columns: 1fr;
+  }
+
+  .bict-image {
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .bict-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #bict-section {
+    padding: 1rem;
+  }
+
+  .bict-card {
+    padding: 2rem 1.2rem;
+    border-radius: 70px 70px 30px 30px;
+  }
+
+  .bict-card h1 {
+    font-size: 3rem;
+  }
+
+  .year {
+    font-size: 1.3rem;
+  }
+
+  .bict-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .bict-image {
+    height: 320px;
+  }
+}

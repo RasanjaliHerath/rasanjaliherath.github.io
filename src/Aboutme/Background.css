@@ -1,0 +1,114 @@
+/* LIGHT THEME */
+
+#background-section.light {
+  --bg-color: #ececec;
+  --card-color: #111111;
+  --accent-color: #4b4949;
+  --text-color: #ffffff;
+  --secondary-text: #d7d7d7;
+}
+
+/* DARK THEME */
+
+#background-section.dark {
+  --bg-color: #1d1b1b;
+  --card-color: #000000;
+  --accent-color: #b7b7b7;
+  --text-color: #ffffff;
+  --secondary-text: #d5d5d5;
+}
+
+/* MAIN SECTION */
+
+#background-section {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background: var(--bg-color);
+  overflow-x: hidden;
+  transition: all 0.4s ease;
+}
+
+/* LAYOUT: title left | education then experience stacked right */
+
+.background-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, 220px) 1fr;
+  align-items: stretch;
+}
+
+.background-panels {
+  display: flex;
+  flex-direction: column;
+}
+
+/* VERTICAL TITLE — spans full height of both panels */
+
+#background-section .vertical-title {
+  background: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0.5rem;
+  overflow: visible;
+  align-self: stretch;
+}
+
+#background-section .vertical-title h1 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+  line-height: 1;
+  color: var(--bg-color);
+  letter-spacing: 0.08em;
+  font-weight: 900;
+  user-select: none;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* EMBEDDED PANELS — education first, experience below */
+
+#background-section .education-split-embedded,
+#background-section .experience-split-embedded {
+  width: 100%;
+  background: var(--bg-color);
+  opacity: 1;
+  visibility: visible;
+}
+
+#background-section .education-split-embedded .education-wrapper,
+#background-section .experience-split-embedded .experience-wrapper {
+  display: grid;
+  width: 100%;
+  min-height: min(100vh, auto);
+  grid-template-columns: 1fr 160px 1fr;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  #background-section .education-split-embedded .education-wrapper,
+  #background-section .experience-split-embedded .experience-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #background-section .vertical-title {
+    min-height: 160px;
+    padding: 1.5rem 1rem;
+  }
+
+  #background-section .vertical-title h1 {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 2.8rem;
+    letter-spacing: 0.12em;
+  }
+}
