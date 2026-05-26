@@ -54,7 +54,7 @@ function ShortAboutMe() {
             viewport={{ once: true }}
           >
 
-            Meet Kaushalya
+            MEET Kaushalya
 
           </motion.h1>
 

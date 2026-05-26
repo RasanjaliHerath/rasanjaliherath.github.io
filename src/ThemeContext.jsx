@@ -3,18 +3,23 @@ import { createContext, useState, useContext, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('theme');
-    if (!saved) return false;
-    try {
-      return JSON.parse(saved);
-    } catch {
-      // Legacy values stored as plain "light" / "dark" (not JSON)
-      if (saved === 'dark') return true;
-      if (saved === 'light') return false;
-      return false;
-    }
-  });
+ const [isDark, setIsDark] = useState(() => {
+  const saved = localStorage.getItem('theme');
+
+  // DEFAULT DARK MODE
+  if (!saved) return true;
+
+  try {
+    return JSON.parse(saved);
+  } catch {
+
+    if (saved === 'dark') return true;
+
+    if (saved === 'light') return false;
+
+    return true;
+  }
+});
 
   useEffect(() => {
     localStorage.setItem('theme', JSON.stringify(isDark));

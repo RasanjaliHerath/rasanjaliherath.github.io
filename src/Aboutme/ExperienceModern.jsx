@@ -123,9 +123,9 @@ function ExperienceModern() {
 
           </ul>
 
-          <div className="experience-image">
+          {/* <div className="experience-image">
             <img src={exp1Image} alt="experience" />
-          </div>
+          </div> */}
 
         </motion.div>
 
@@ -216,10 +216,10 @@ function ExperienceModern() {
 </li>
 
           </ul>
-
+{/* 
           <div className="experience-image">
             <img src={expImage} alt="experience" />
-          </div>
+          </div> */}
 
         </motion.div>
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 import {
   FaCode,
@@ -38,19 +39,40 @@ function ContactForm() {
 
     e.preventDefault();
 
-    console.log(formData);
+    emailjs.send(
+      'service_zphaek7',
+      'template_ncmr6sz',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'y1kI1TN5cGyp3Di18'
+    )
 
-    setSubmitted(true);
+    .then(() => {
 
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
+      setSubmitted(true);
+
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+
+    })
+
+    .catch((error) => {
+
+      console.log(error);
+
+      alert('Failed to send message');
+
     });
-
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
   };
 
   return (

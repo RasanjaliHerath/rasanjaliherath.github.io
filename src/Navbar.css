@@ -37,6 +37,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+}
+
+/* RIGHT SIDE */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 /* LOGO */
@@ -53,7 +63,8 @@
   align-items: center;
 }
 
-/* logow.png has a lot of empty canvas — scale + clip so the mark matches logo.jpg */
+/* DARK LOGO FIX */
+
 .logo-link:has(.logo-image--dark) {
   height: 48px;
   overflow: hidden;
@@ -130,7 +141,7 @@
 /* HOVER */
 
 .nav-link:hover {
-  color: #492e0e;
+  color: #0f0e0d;
 }
 
 .navbar.dark .nav-link:hover {
@@ -150,7 +161,7 @@
   width: 0%;
   height: 2px;
 
-  background: #492e0e;
+  background: #0e0801;
 
   transition: 0.3s ease;
 }
@@ -181,29 +192,29 @@
 
   font-size: 0.95rem;
 
-  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .theme-toggle svg {
   display: block;
   width: 1.1em;
   height: 1.1em;
-  flex-shrink: 0;
 }
 
 /* LIGHT */
 
 .navbar.light .theme-toggle {
   background: #ffffff;
-
-  color: #492e0e;
+  color: #0e0d0c;
 }
 
 /* DARK */
 
 .navbar.dark .theme-toggle {
   background: #111111;
-
   color: #d7c4b3;
 }
 
@@ -213,6 +224,46 @@
 
 .theme-toggle:active {
   transform: scale(0.97);
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.3rem;
+
+  transition: 0.3s ease;
+}
+
+/* LIGHT */
+
+.navbar.light .mobile-menu-btn {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* DARK */
+
+.navbar.dark .mobile-menu-btn {
+  background: #111111;
+  color: #ffffff;
+}
+
+.mobile-menu-btn:hover {
+  transform: scale(1.05);
 }
 
 /* RESPONSIVE */
@@ -240,13 +291,61 @@
     transform: scale(1.45);
   }
 
+  /* MOBILE BUTTON */
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* MENU */
+
   .nav-menu {
-    gap: 1rem;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+
+    transform: translateY(-20px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+  }
+
+  /* LIGHT MENU */
+
+  .navbar.light .nav-menu {
+    background: #ececec;
+  }
+
+  /* DARK MENU */
+
+  .navbar.dark .nav-menu {
+    background: #1d1b1b;
+  }
+
+  /* ACTIVE */
+
+  .nav-menu.active {
+    transform: translateY(0);
+
+    opacity: 1;
+
+    pointer-events: auto;
   }
 
   .nav-link {
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
+    font-size: 0.78rem;
   }
 
   .theme-toggle {

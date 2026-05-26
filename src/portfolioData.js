@@ -326,8 +326,8 @@ projects: [
       '/images/portfolio5.png',
     ],
 
-    github: 'https://github.com',
-    demo: 'https://rasanjali-portfolio.netlify.app',
+    github: 'https://github.com/RasanjaliHerath/krh-portfolio',
+    demo: 'https://app.netlify.com/projects/hi-im-mis-lily/',
     videoDemo: 'https://youtu.be/portfolio-demo',
     featured: false,
   },

@@ -72,10 +72,10 @@ function EducationModern() {
 
             <div className="education-image-top">
 
-              <img
+              {/* <img
                 src={eduImage}
                 alt="education"
-              />
+              /> */}
 
             </div>
 
@@ -86,7 +86,7 @@ function EducationModern() {
               </h2>
 
               <h3>
-                University of Vavuniya
+                University of Jaffna
               </h3>
 
               <span>

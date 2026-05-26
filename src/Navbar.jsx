@@ -1,4 +1,12 @@
-import { HiSun, HiMoon } from 'react-icons/hi2';
+import { useState } from 'react';
+
+import {
+  HiSun,
+  HiMoon,
+  HiBars3,
+  HiXMark
+} from 'react-icons/hi2';
+
 import { useTheme } from './ThemeContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,8 +21,11 @@ function Navbar() {
 
   const navigate = useNavigate();
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleNavigate = (path) => {
     navigate(path);
+    setMenuOpen(false);
   };
 
   return (
@@ -28,7 +39,7 @@ function Navbar() {
         <div className="nav-logo">
 
           <button
-            onClick={() => navigate('/')}
+            onClick={() => handleNavigate('/')}
             className="logo-link"
           >
 
@@ -44,66 +55,82 @@ function Navbar() {
 
         {/* MENU */}
 
-        <ul className="nav-menu">
+        <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
 
           <li className="nav-item">
+
             <button
               onClick={() => handleNavigate('/')}
               className="nav-link"
             >
               HOME
             </button>
+
           </li>
 
           <li className="nav-item">
+
             <button
               onClick={() => handleNavigate('/about')}
               className="nav-link"
             >
               ABOUT
             </button>
+
           </li>
 
           <li className="nav-item">
+
             <button
               onClick={() => handleNavigate('/projects')}
               className="nav-link"
             >
               WORKS
             </button>
+
           </li>
 
-          {/* <li className="nav-item">
-            <button
-              onClick={() => handleNavigate('/services')}
-              className="nav-link"
-            >
-              Services
-            </button>
-          </li> */}
-
           <li className="nav-item">
+
             <button
               onClick={() => handleNavigate('/contact')}
               className="nav-link"
             >
               CONTACT
             </button>
+
           </li>
 
         </ul>
 
-        {/* THEME */}
+        {/* RIGHT SIDE */}
 
-        <button
-          className="theme-toggle"
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
+        <div className="nav-right">
 
-          {isDark ? <HiSun aria-hidden /> : <HiMoon aria-hidden />}
+          {/* THEME */}
 
-        </button>
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+
+            {isDark ? <HiSun aria-hidden /> : <HiMoon aria-hidden />}
+
+          </button>
+
+          {/* MOBILE MENU */}
+
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+
+            {menuOpen ? <HiXMark /> : <HiBars3 />}
+
+          </button>
+
+        </div>
 
       </div>
 
