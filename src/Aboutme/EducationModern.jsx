@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTheme } from '../ThemeContext';
 import './EducationModern.css';
-import eduImage from '../assets/uni.png';
+
 import edu2Image from '../assets/java.jpg';
 import edu3Image from '../assets/mern.jpg';
 

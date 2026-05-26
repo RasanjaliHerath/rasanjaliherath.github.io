@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../ThemeContext';
 import './ExperienceModern.css';
 
-import expImage from '../assets/Sejaya-Logo.jpg';
-import exp1Image from '../assets/idt.png';
+
 
 
 function ExperienceModern() {
