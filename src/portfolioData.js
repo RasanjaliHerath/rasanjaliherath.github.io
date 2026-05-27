@@ -3,7 +3,7 @@ export const portfolioData = {
   initials: 'H.H.M.K.R.',
   title: 'Software Developer',
   email: 'krherath.dev@gmail.com',
-  phone: '077 82 66 824',
+  phone: '+94 77 82 66 824',
   location: 'No.54, Beramana, wijayabhahukandha',
   profileSummary: `Software Developer with hands-on experience in PHP, MySQL, and modern JavaScript frameworks including React. Skilled in developing responsive web applications, RESTful APIs, and database-driven systems. Familiar with Spring Boot, SQL Server, and full-stack development. Passionate about building scalable and high-performance applications aligned with industry standards.`,
   

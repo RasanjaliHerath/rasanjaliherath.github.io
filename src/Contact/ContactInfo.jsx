@@ -105,7 +105,7 @@ function ContactInfo() {
                 <h3>WhatsApp</h3>
 
                 <p>
-                  077 82 66 824
+                  +94 77 82 66 824
                 </p>
               </div>
 
@@ -126,7 +126,7 @@ function ContactInfo() {
                 <h3>Call</h3>
 
                 <p>
-                  070 366 1394
+                  +94 70 366 1394
                 </p>
               </div>
 
