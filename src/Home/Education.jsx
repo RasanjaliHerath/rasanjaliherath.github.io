@@ -13,7 +13,7 @@ import './Education.css';
 
 const educationData = [
   {
-    title: 'University of Vavuniya — BICT (Honors)',
+    title: 'University of Jaffna — BICT (Honors)',
     year: '2022 - 2026',
     icon: <FaGraduationCap />,
     bullets: [
