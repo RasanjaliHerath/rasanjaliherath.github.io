@@ -20,7 +20,7 @@ export const portfolioData = {
   education: [
     {
       id: 1,
-      institution: 'University of Vavuniya',
+      institution: 'University of Jaffna',
       degree: 'BICT (Honors)',
       period: '2020-2024',
     },
