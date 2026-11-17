@@ -116,7 +116,7 @@ projects: [
   ],
 
   github: 'https://github.com/RasanjaliHerath/fixkart',
-  demo: '',
+  demo: 'https://fix-kart.netlify.app/',
   featured: true,
 },
 
