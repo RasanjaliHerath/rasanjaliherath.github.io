@@ -72,6 +72,56 @@ export const portfolioData = {
   ],
 
 projects: [
+
+{
+  id: 16,
+  name: 'FixKart - E-Commerce & Mobile Repair Platform',
+  category: 'fullstack',
+
+  description:
+    'Developed a modern full-stack e-commerce platform for mobile accessories, spare parts, and repair bookings using React, Spring Boot, and MySQL.',
+
+  longDescription:
+    'FixKart is a comprehensive full-stack e-commerce and mobile repair management platform that allows customers to browse products, search and filter accessories, manage shopping carts and wishlists, place orders, track deliveries, and book mobile device repairs. The platform features a responsive interface with light and dark themes, promotional offers, and secure customer authentication. A centralized admin dashboard enables product and inventory management, customer management, repair booking administration, contact message handling, and order processing with status history, correction, and archiving. Built with a React frontend, Java Spring Boot RESTful APIs, and a MySQL database.',
+
+  technologies: [
+    'React',
+    'Java',
+    'Spring Boot',
+    'MySQL',
+    'JavaScript',
+    'REST API',
+    'Axios',
+    'Vite',
+    'CSS3',
+    'Maven',
+    'XAMPP'
+  ],
+
+  images: [
+    
+  '/images/fixkart1.png',
+  '/images/fixkart2.png',
+  '/images/fixkart3.png',
+  '/images/fixkart4.png',
+  '/images/fixkart5.png',
+  '/images/fixkart6.png',
+  '/images/fixkart7.png',
+  '/images/fixkart8.png',
+  '/images/fixkart9.png',
+  '/images/fixkart10.png',
+  '/images/fixkart11.png',
+  '/images/fixkart12.png',
+
+  ],
+
+  github: 'https://github.com/RasanjaliHerath/fixkart',
+  demo: '',
+  featured: true,
+},
+
+
+
   {
     id: 1,
     name: 'KECT Consults Website',
