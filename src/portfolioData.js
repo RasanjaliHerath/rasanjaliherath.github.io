@@ -120,7 +120,51 @@ projects: [
   featured: true,
 },
 
+{
+  id: 17,
 
+  name: 'MotorShow',
+
+  category: 'fullstack',
+
+  description:
+    'A modern full-stack automotive e-commerce platform built with React, Spring Boot, and MySQL, featuring vehicle-compatible parts shopping, secure checkout, inventory management, and vehicle service booking.',
+
+  longDescription:
+    'MotorShow is a comprehensive full-stack automotive e-commerce and vehicle service management platform developed using React, Spring Boot, and MySQL. The application allows customers to browse automotive parts and accessories, search for compatible products using a Make, Model, and Year Vehicle Parts Finder, view detailed product specifications, manage wishlists and shopping carts, and place orders through a secure checkout process. Customers can also book vehicle maintenance and repair services, upload supporting images, track service requests, and manage their account information. The platform features a professional admin dashboard with real-time database-driven analytics, product and inventory management, order processing, customer management, promotions, and vehicle service booking administration. Additional features include role-based authentication, RESTful API integration, server-side validation, secure image uploads, order status tracking, stock protection during concurrent checkout, and responsive layouts. MotorShow demonstrates practical full-stack development, database design, application security, and modern automotive e-commerce workflows.',
+
+  technologies: [
+    'React.js',
+    'JavaScript',
+    'Vite',
+    'Java',
+    'Spring Boot',
+    'Spring Security',
+    'MySQL',
+    'RESTful APIs',
+    'JPA / Hibernate',
+    'HTML5',
+    'CSS3',
+    'Responsive Design',
+    'Git',
+    'GitHub',
+    'Maven',
+  ],
+
+  images: [
+    '/images/motorshow.png',
+    
+  ],
+
+  github:
+    'https://github.com/RasanjaliHerath/motorshow',
+
+  demo: '',
+
+  videoDemo: '',
+
+  featured: true,
+},
 
   {
     id: 1,
